@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="/"><h1>
-    <svg id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
-    </svg>
-
-</h1></a>
 <center>
 
-    <ul>
+    <a href="/"><h1>
+        <svg id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+        </svg>
+        
+    </h1></a>
+</center>
+<center>
+
         <!-- Iterate over object_list -->
         <!-- Display Objects -->
-        <li><h1 class="display3">
+        <h1 class="display3">
             <svg id="i-paperclip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M10 9 L10 24 C10 28 13 30 16 30 19 30 22 28 22 24 L22 6 C22 3 20 2 18 2 16 2 14 3 14 6 L14 23 C14 24 15 25 16 25 17 25 18 24 18 23 L18 9" />
             </svg>{{ object.content }}</h1></li>
@@ -23,7 +25,6 @@
                 <a href="delete" class="btn btn-danger">Delete</a>
             </p>
             
-            <hr/>
-        </ul>
+        
         {% endblock %}
     </center>
