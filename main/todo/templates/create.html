@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<a href="/"><h1>
+    <svg id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+    </svg>
+
+</h1></a>
+<center>
+
+    
+    <svg id="i-file" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M6 2 L6 30 26 30 26 10 18 2 Z M18 2 L18 10 26 10" />
+    </svg>
+    <form method="post" class="row g-3">{% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-dark d-grid" type="submit" value="Save">
+    </form>
+    
+</center>
+{% endblock %}
